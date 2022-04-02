@@ -236,7 +236,7 @@ export default function HomePage() {
         </div> */}
       </header>
 
-      <div className="grid grid-cols-3 gap-5 mx-10 h-36">
+      <div className="grid gap-5 m-10 md:grid-cols-3 sm:grid-cols-1">
         <div className="flex justify-start flex-row	gap-y-2">
           <div>
             <svg
@@ -319,7 +319,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-5 p-10 bg-indigo-200">
+      <div className="grid gap-5 p-10 bg-indigo-200 md:grid-cols-3 sm:grid-cols-1 ">
         <div className="flex justify-start flex-col gap-y-2 justify-center items-center">
           <div>
             <Animated
