@@ -4,11 +4,10 @@
  * @format
  */
 
-import { Fragment } from "react"
-import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
-import "./HomePage.css"
+import { Disclosure } from "@headlessui/react"
+import { BellIcon } from "@heroicons/react/outline"
 import { Animated } from "react-animated-css"
+import "./HomePage.css"
 
 const user = {
   name: "Tom Cook",
@@ -70,69 +69,6 @@ export default function HomePage() {
                         ))}
                       </div>
                     </div>
-                  </div>
-                  <div className="hidden md:block">
-                    <div className="ml-4 flex items-center md:ml-6">
-                      <button
-                        type="button"
-                        className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                      >
-                        <span className="sr-only">View notifications</span>
-                        <BellIcon className="h-6 w-6" aria-hidden="true" />
-                      </button>
-
-                      {/* Profile dropdown */}
-                      <Menu as="div" className="ml-3 relative">
-                        <div>
-                          <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                            <span className="sr-only">Open user menu</span>
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={user.imageUrl}
-                              alt=""
-                            />
-                          </Menu.Button>
-                        </div>
-                        <Transition
-                          as={Fragment}
-                          enter="transition ease-out duration-100"
-                          enterFrom="transform opacity-0 scale-95"
-                          enterTo="transform opacity-100 scale-100"
-                          leave="transition ease-in duration-75"
-                          leaveFrom="transform opacity-100 scale-100"
-                          leaveTo="transform opacity-0 scale-95"
-                        >
-                          <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {userNavigation.map((item) => (
-                              <Menu.Item key={item.name}>
-                                {({ active }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
-                                    )}
-                                  >
-                                    {item.name}
-                                  </a>
-                                )}
-                              </Menu.Item>
-                            ))}
-                          </Menu.Items>
-                        </Transition>
-                      </Menu>
-                    </div>
-                  </div>
-                  <div className="-mr-2 flex md:hidden">
-                    {/* Mobile menu button */}
-                    <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                      <span className="sr-only">Open main menu</span>
-                      {open ? (
-                        <XIcon className="block h-6 w-6" aria-hidden="true" />
-                      ) : (
-                        <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                      )}
-                    </Disclosure.Button>
                   </div>
                 </div>
               </div>
@@ -200,8 +136,8 @@ export default function HomePage() {
         </Disclosure>
       </div>
       <div>
-        <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-          <video
+        <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden custom-img-2">
+          {/* <video
             autoPlay
             loop
             muted
@@ -209,7 +145,7 @@ export default function HomePage() {
           >
             <source src="/assets/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </header>
       </div>
 
@@ -217,15 +153,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Giới Thiệu về Lan Anh Bình Dương
+              Giới thiệu về Hoa Tiên Science
             </p>
             <p className="mt-4 text-xl text-gray-500 lg:mx-auto">
-              Với hơn 20 năm xây dựng và phát triển, Chúng tôi luôn đặt niềm tin của khách
-              hàng lên hàng đầu và luôn tạo ra những sản phẩm đạt chất lượng tốt nhất.
-              Được thành lập từ những năm 1994, với sự quyết tâm cao độ chúng tôi đã không
-              ngừng phát triển từ cơ sở nhỏ trở mình thành Công Ty TNHH MTV Lan Anh Bình
-              Dương vào năm 2014. Với tiêu chí giữ vững niềm tin của khách hàng và chất
-              lượng sản phẩm là trên hết.
+              Công ty TNHH Khoa học Hoa Tiên hân hạnh là đơn vị đồng hành để tư vấn và
+              cung cấp các giải pháp toàn diện cho phòng thí nghiệm vận hành và được công
+              nhận theo tiêu chuẩn ISO 17025, thông qua việc kết hợp hài hoà giữa tiêu
+              chuẩn và điều kiện thực tế, nhu cầu và khả năng của phòng thí nghiệm.
             </p>
           </div>
         </div>
@@ -258,8 +192,8 @@ export default function HomePage() {
               Sáng tạo & Nổ Lực
             </p>
             <p className="mt-0 text-lg text-gray-500">
-              Chúng tôi đã và đang nổ lực không ngừng để đổi mới và xây dựng những điều
-              mới. Luôn sáng tạo trong công việc để tạo ra những giá trị mới.
+              Chúng tôi đào tạo, cả lý thuyết và thực hành, cung cấp trọn gói và xây dựng
+              nền tảng hệ thống phòng thí nghiệm chuyên nghiệp nhất cho bạn, từ A đến Z!
             </p>
           </div>
         </div>
@@ -284,8 +218,9 @@ export default function HomePage() {
               Nhiệt Huyết
             </p>
             <p className="mt-0 text-lg text-gray-500">
-              Luôn làm việc với tinh thần nhiệt huyết cao độ và đảm bảo chất lượng tốt
-              nhất với đội ngũ nhân viên chuyên nghiệp
+              Bên cạnh đó, chúng tôi còn đào tạo và tư vấn đầy đủ các hệ thống tiêu chuẩn
+              như ISO 15189, ISO 9001, ISO 14001, HACCP, GMP, ISO 22000, FSSC, IFS, HALAL,
+              BRC, FDA, GAP, Global GAP, Nông nghiệp hữu cơ...
             </p>
           </div>
         </div>
@@ -312,8 +247,8 @@ export default function HomePage() {
               Uy Tín
             </p>
             <p className="mt-0 text-lg text-gray-500">
-              Sự tính nhiệm và tin tưởng của khách hàng luôn là yếu tố hàng đầu của chúng
-              tôi để có thể cung cấp những dịch vụ và sản phẩm một cách tốt nhất.
+              Đội ngũ chuyên gia có nhiều năm kinh nghiệm làm việc thực tế và trong lĩnh
+              vực đánh giá, đào tạo và tư vấn các hệ thống quản lý.
             </p>
           </div>
         </div>
@@ -370,10 +305,7 @@ export default function HomePage() {
         </div>
         <div className="flex justify-start flex-col gap-y-2 justify-center items-center">
           <p className="mt-0 text-lg text-gray-500">
-            Luôn đặt niềm tin của khách hàng lên hàng đầu, nhầm đáp ứng tốt mọi nhu cầu về
-            chất lượng sản phẩm mà chúng tôi đang cung cấp. Bên cạnh đó, với đội ngủ nhân
-            viên đầy sáng tạo và nổ lực. Chúng tôi không ngừng cải tiến và tạo ra những
-            sản phẩm mới.
+            Chúng tôi luôn sẵn sàng trao đổi để cùng đồng hành với bạn!
           </p>
         </div>
       </div>
@@ -386,10 +318,13 @@ export default function HomePage() {
 
             <div className="flex flex-col text-gray-500 uppercase text-sm">
               <a href="#" className="mr-2 hover:text-indigo-600">
-                Phone: 0347xxxxxx
+                Phone: 0839 186 127
               </a>
-              <a href="#" className="mr-2 hover:text-indigo-600">
-                info@hoatien.com
+              <a
+                href="mailto:hoatienscience@gmail.com"
+                className="mr-2 hover:text-indigo-600"
+              >
+                hoatienscience@gmail.com
               </a>
             </div>
           </div>
@@ -406,7 +341,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
-          <p>© Copyright 2020. All Rights Reserved.</p>
+          <p>© Copyright Hoa Tiên Science 2022</p>
         </div>
       </div>
     </>
