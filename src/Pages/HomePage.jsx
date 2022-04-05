@@ -158,7 +158,7 @@ export default function HomePage() {
             <p className="mt-4 text-xl text-gray-500 lg:mx-auto">
               Công ty TNHH Khoa học Hoa Tiên hân hạnh là đơn vị đồng hành để tư vấn và
               cung cấp các giải pháp toàn diện cho phòng thí nghiệm vận hành và được công
-              nhận theo tiêu chuẩn ISO 17025, thông qua việc kết hợp hài hoà giữa tiêu
+              nhận theo tiêu chuẩn ISO 17025, thông qua việc kết hợp hài hòa giữa tiêu
               chuẩn và điều kiện thực tế, nhu cầu và khả năng của phòng thí nghiệm.
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function HomePage() {
 
           <div className="ml-3">
             <p className="text-xl leading-8 font-extrabold tracking-tight text-gray-900">
-              Sáng tạo & Nổ Lực
+              Sáng tạo & Nỗ Lực
             </p>
             <p className="mt-0 text-lg text-gray-500">
               Chúng tôi đào tạo, cả lý thuyết và thực hành, cung cấp trọn gói và xây dựng
@@ -218,9 +218,9 @@ export default function HomePage() {
               Nhiệt Huyết
             </p>
             <p className="mt-0 text-lg text-gray-500">
-              Bên cạnh đó, chúng tôi còn đào tạo và tư vấn đầy đủ các hệ thống tiêu chuẩn
-              như ISO 15189, ISO 9001, ISO 14001, HACCP, GMP, ISO 22000, FSSC, IFS, HALAL,
-              BRC, FDA, GAP, Global GAP, Nông nghiệp hữu cơ...
+              Chúng tôi tư vấn và đào tạo đầy đủ các hệ thống tiêu chuẩn ISO 17025, ISO
+              15189, ISO 9001, ISO 14001, ISO 22000, HACCP, GMP, FSSC, IFS, HALAL, BRC,
+              FDA, GAP, Global GAP, Nông nghiệp hữu cơ...
             </p>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function HomePage() {
                 id="nbr"
                 className="text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
               >
-                100+
+                50+
               </p>
             </Animated>
           </div>
@@ -292,7 +292,7 @@ export default function HomePage() {
                 id="nbr"
                 className="text-6xl leading-8 font-extrabold tracking-tight text-gray-900"
               >
-                1000+
+                50+
               </p>
             </Animated>
           </div>
@@ -305,7 +305,7 @@ export default function HomePage() {
         </div>
         <div className="flex justify-start flex-col gap-y-2 justify-center items-center">
           <p className="mt-0 text-lg text-gray-500">
-            Chúng tôi luôn sẵn sàng trao đổi để cùng đồng hành với bạn!
+            Chúng tôi sẵn sàng trao đổi để đồng hành cùng bạn!
           </p>
         </div>
       </div>
@@ -317,15 +317,51 @@ export default function HomePage() {
             <h3 className="font-bold text-3xl text-indigo-600 mb-4">Hoa Tien</h3>
 
             <div className="flex flex-col text-gray-500 uppercase text-sm">
-              <a href="#" className="mr-2 hover:text-indigo-600">
-                Phone: 0839 186 127
-              </a>
-              <a
-                href="mailto:hoatienscience@gmail.com"
-                className="mr-2 hover:text-indigo-600"
-              >
-                hoatienscience@gmail.com
-              </a>
+              <div className="flex items-center gap-2">
+                <svg
+                  class="h-8 w-8 text-green-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <div>
+                  <a href="#" className="mr-2 hover:text-indigo-600">
+                    0839 186 127
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg
+                  class="h-8 w-8 text-green-500"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                  <rect x="3" y="5" width="18" height="14" rx="2" />{" "}
+                  <polyline points="3 7 12 13 21 7" />
+                </svg>
+                <div>
+                  <a
+                    href="mailto:hoatienscience@gmail.com"
+                    className="mr-2 hover:text-indigo-600"
+                  >
+                    hoatienscience@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="p-5 sm:w-4/12">

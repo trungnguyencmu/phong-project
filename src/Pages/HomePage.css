@@ -1,9 +1,9 @@
 .custom-img {
-  background-image: url("/public/assets/image-3.jpg");
+  background-image: url("/public/assets/image-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .custom-img-2 {
-  background-image: url("/public/assets/image-2.jpg");
+  background-image: url("/public/assets/image-3.jpg");
 }
