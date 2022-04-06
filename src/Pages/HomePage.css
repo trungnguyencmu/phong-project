@@ -7,3 +7,6 @@
 .custom-img-2 {
   background-image: url("/public/assets/image-3.jpg");
 }
+.logo {
+  object-fit: cover;
+}
