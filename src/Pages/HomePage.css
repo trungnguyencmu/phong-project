@@ -1,12 +1,15 @@
-.custom-img {
-  background-image: url("/public/assets/image-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+/* Navy gradient over the hero photo: solid on the left for text contrast,
+   lighter on the right so the lab glassware stays visible. */
+.hero-overlay {
+  background-image: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.96) 0%,
+    rgba(15, 23, 42, 0.88) 45%,
+    rgba(15, 23, 42, 0.6) 100%
+  );
 }
 
-.custom-img-2 {
-  background-image: url("/public/assets/image-3.jpg");
-}
-.logo {
-  object-fit: cover;
+/* Avoid a single orphan word on the last line of short headings */
+.text-balance {
+  text-wrap: balance;
 }
